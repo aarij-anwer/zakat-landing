@@ -7,7 +7,7 @@ export default function Home() {
     name: 'Zakat Calculator for Canadians',
     description:
       'A simple, accurate, and private spreadsheet to calculate your annual Zakat. Your data stays entirely in your own Google Drive.',
-    url: 'https://zakatbot.com',
+    url: 'https://zakatforcanadians.com',
     applicationCategory: 'FinanceApplication',
     operatingSystem: 'Any',
     offers: {
