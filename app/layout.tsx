@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Qutoof Academy' }],
   creator: 'Qutoof Academy',
   publisher: 'Qutoof Academy',
-  metadataBase: new URL('https://zakatforcanadians.com'),
+  metadataBase: new URL('https://zakatforcandians.com'),
   alternates: {
     canonical: '/',
   },
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: 'Zakat Calculator for Canadians',
     description:
       'Free, private zakat calculator for Canadian Muslims. Calculate your obligations with support for TFSA, RRSP, RESP, and accurate nisab thresholds.',
-    url: 'https://zakatforcanadians.com',
+    url: 'https://zakatforcandians.com',
     siteName: 'Zakat Calculator',
     locale: 'en_CA',
     type: 'website',
