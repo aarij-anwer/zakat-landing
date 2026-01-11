@@ -41,13 +41,12 @@ export default function Home() {
           fill="currentColor"
           className="w-8 h-8"
         >
-          <path d="M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.161 14.34 9 15.375 9h1.875A3.75 3.75 0 0 1 21 12.75v3.375C21 17.16 20.16 18 19.125 18h-9.75A1.875 1.875 0 0 1 7.5 16.125V3.375Z" />
-          <path d="M15 5.25a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 17.25 7.5h-1.875A.375.375 0 0 1 15 7.125V5.25ZM4.875 6H6v10.125A3.375 3.375 0 0 0 9.375 19.5H16.5v1.125c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V7.875C3 6.839 3.84 6 4.875 6Z" />
+          <path fillRule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v11.69l3.22-3.22a.75.75 0 1 1 1.06 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.22 3.22V3a.75.75 0 0 1 .75-.75Zm-9 13.5a.75.75 0 0 1 .75.75v2.25a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V16.5a.75.75 0 0 1 1.5 0v2.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V16.5a.75.75 0 0 1 .75-.75Z" clipRule="evenodd" />
         </svg>
       ),
-      title: 'Make a Copy',
+      title: 'Get Your Spreadsheet',
       description:
-        'Click the button and Google will create your personal copy of the spreadsheet.',
+        'Choose Google Sheets or Excel and get your personal copy.',
     },
     {
       icon: (
@@ -130,34 +129,48 @@ export default function Home() {
             />
           </div>
 
-          <a
-            href={COPY_LINK}
-            target="_blank"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition mt-4"
-          >
-            Start – Make Your Copy
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="w-5 h-5"
-            >
-              <path
-                fillRule="evenodd"
-                d="M13.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                clipRule="evenodd"
-              />
-              <path
-                fillRule="evenodd"
-                d="M19.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </a>
-
-          <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
-            Your data stays entirely in your own Google Drive.
-          </p>
+          <div className="flex flex-wrap gap-6 mt-4">
+            <div className="flex flex-col">
+              <a
+                href={COPY_LINK}
+                target="_blank"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  className="w-5 h-5"
+                  fill="currentColor"
+                >
+                  <path d="M19.5 3h-15A1.5 1.5 0 003 4.5v15A1.5 1.5 0 004.5 21h15a1.5 1.5 0 001.5-1.5v-15A1.5 1.5 0 0019.5 3zM9 17H6v-2h3v2zm0-4H6v-2h3v2zm0-4H6V7h3v2zm8 8h-6v-2h6v2zm0-4h-6v-2h6v2zm0-4h-6V7h6v2z"/>
+                </svg>
+                Google Sheets
+              </a>
+              <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
+                Your data stays entirely in your own Google Drive.
+              </p>
+            </div>
+            <div className="flex flex-col">
+              <a
+                href="#"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-700 text-white font-semibold rounded-lg hover:bg-emerald-800 transition"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  className="w-5 h-5"
+                  fill="currentColor"
+                >
+                  <path d="M21.17 3H7.83A1.83 1.83 0 006 4.83v14.34A1.83 1.83 0 007.83 21h13.34A1.83 1.83 0 0023 19.17V4.83A1.83 1.83 0 0021.17 3zM12 17l-4-4h3V9h2v4h3l-4 4z"/>
+                  <path d="M3 5v14c0 1.1.9 2 2 2h14v-2H5V5H3z" opacity=".5"/>
+                </svg>
+                Excel Spreadsheet
+              </a>
+              <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
+                Your data stays entirely on your own computer.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* How It Works Section */}
