@@ -129,41 +129,35 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex flex-wrap gap-6 mt-4">
-            <div className="flex flex-col">
+          <div className="flex flex-col gap-4 mt-6 max-w-md">
+            <div>
               <a
                 href={COPY_LINK}
                 target="_blank"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition min-w-[200px]"
+                className="flex items-center gap-4 w-full px-8 py-5 bg-green-600 text-white text-xl font-bold rounded-xl hover:bg-green-700 transition shadow-lg hover:shadow-xl"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className="w-5 h-5"
-                  fill="currentColor"
-                >
-                  <path d="M19.5 3h-15A1.5 1.5 0 003 4.5v15A1.5 1.5 0 004.5 21h15a1.5 1.5 0 001.5-1.5v-15A1.5 1.5 0 0019.5 3zM9 17H6v-2h3v2zm0-4H6v-2h3v2zm0-4H6V7h3v2zm8 8h-6v-2h6v2zm0-4h-6v-2h6v2zm0-4h-6V7h6v2z"/>
-                </svg>
+                <img
+                  src="/Google_Sheets_2020_Logo.svg"
+                  alt="Google Sheets"
+                  className="w-8 h-8"
+                />
                 Google Sheets
               </a>
               <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
                 Your data stays entirely in your own Google Drive.
               </p>
             </div>
-            <div className="flex flex-col">
+            <div>
               <a
-                href="#"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-700 text-white font-semibold rounded-lg hover:bg-emerald-800 transition min-w-[200px]"
+                href="/Zakat Calculator for Canadians.xlsx"
+                download
+                className="flex items-center gap-4 w-full px-8 py-5 bg-emerald-700 text-white text-xl font-bold rounded-xl hover:bg-emerald-800 transition shadow-lg hover:shadow-xl"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className="w-5 h-5"
-                  fill="currentColor"
-                >
-                  <path d="M21.17 3H7.83A1.83 1.83 0 006 4.83v14.34A1.83 1.83 0 007.83 21h13.34A1.83 1.83 0 0023 19.17V4.83A1.83 1.83 0 0021.17 3zM12 17l-4-4h3V9h2v4h3l-4 4z"/>
-                  <path d="M3 5v14c0 1.1.9 2 2 2h14v-2H5V5H3z" opacity=".5"/>
-                </svg>
+                <img
+                  src="/Microsoft_Office_Excel_(2025–present).svg"
+                  alt="Excel"
+                  className="w-8 h-8"
+                />
                 Excel Spreadsheet
               </a>
               <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
