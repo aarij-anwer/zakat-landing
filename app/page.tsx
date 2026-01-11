@@ -29,6 +29,7 @@ export default function Home() {
       'Google Sheets integration',
     ],
   };
+
   const COPY_LINK =
     'https://docs.google.com/spreadsheets/d/10kSPZtWwijBG7QOcCFm1nm2AMDzOPKQLqltfJhY6g24/copy';
 
@@ -45,8 +46,7 @@ export default function Home() {
         </svg>
       ),
       title: 'Get Your Spreadsheet',
-      description:
-        'Choose Google Sheets or Excel and get your personal copy.',
+      description: 'Choose Google Sheets or Excel and get your personal copy.',
     },
     {
       icon: (
@@ -64,8 +64,7 @@ export default function Home() {
         </svg>
       ),
       title: 'Enter Amounts',
-      description:
-        'Fill in your assets and liabilities in the guided input cells.',
+      description: 'Fill in your assets and liabilities in the green input cells.',
     },
     {
       icon: (
@@ -88,8 +87,7 @@ export default function Home() {
         </svg>
       ),
       title: 'Get Your Zakat',
-      description:
-        'The spreadsheet instantly calculates your Zakat amount owed.',
+      description: 'The spreadsheet instantly calculates your Zakat amount owed.',
     },
   ];
 
@@ -109,18 +107,20 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+
       <main className="mx-auto max-w-5xl p-6 mb-6 lg:mb-10">
         {/* Hero Section */}
         <section className="mb-6">
           <h1 className="text-3xl lg:text-5xl font-bold mb-2">
             Zakat Calculator for Canadians
           </h1>
+
           <div className="relative mb-3">
             {/* Hidden content to reserve space */}
             <p className="text-xl text-neutral-600 dark:text-neutral-400 invisible">
-              A simple, accurate, and private spreadsheet to calculate your
-              annual Zakat.
+              A simple, accurate, and private spreadsheet to calculate your annual Zakat.
             </p>
+
             {/* Visible animated content */}
             <TypewriterText
               text="A simple, accurate, and private spreadsheet to calculate your annual Zakat."
@@ -129,39 +129,72 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex flex-col gap-4 mt-6 max-w-md">
-            <div>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mt-8 max-w-xl w-full mx-auto">
+            {/* Google Sheets */}
+            <div className="flex-1">
               <a
                 href={COPY_LINK}
                 target="_blank"
-                className="flex items-center gap-4 w-full px-8 py-5 bg-green-600 text-white text-xl font-bold rounded-xl hover:bg-green-700 transition shadow-lg hover:shadow-xl"
+                rel="noopener noreferrer"
+                className="
+                  group flex items-center justify-center gap-3 w-full
+                  px-8 py-5
+                  rounded-xl
+                  border border-neutral-300 dark:border-neutral-700
+                  bg-transparent
+                  text-neutral-900 dark:text-neutral-100
+                  text-base sm:text-lg font-semibold
+                  transition-all
+                  hover:bg-emerald-50 dark:hover:bg-emerald-950/30
+                  hover:border-emerald-300 dark:hover:border-emerald-700
+                  focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900
+                  shadow-sm hover:shadow-md
+                "
               >
                 <img
                   src="/Google_Sheets_2020_Logo.svg"
-                  alt="Google Sheets"
+                  alt=""
+                  loading="lazy"
                   className="w-8 h-8"
                 />
-                Google Sheets
+                <span>Use Google Sheets</span>
               </a>
-              <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
-                Your data stays entirely in your own Google Drive.
+              <p className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mt-2 text-center">
+                Your data stays in your own Google Drive.
               </p>
             </div>
-            <div>
+
+            {/* Excel */}
+            <div className="flex-1">
               <a
                 href="/Zakat Calculator for Canadians.xlsx"
                 download
-                className="flex items-center gap-4 w-full px-8 py-5 bg-emerald-700 text-white text-xl font-bold rounded-xl hover:bg-emerald-800 transition shadow-lg hover:shadow-xl"
+                className="
+                  group flex items-center justify-center gap-3 w-full
+                  px-8 py-5
+                  rounded-xl
+                  border border-neutral-300 dark:border-neutral-700
+                  bg-transparent
+                  text-neutral-900 dark:text-neutral-100
+                  text-base sm:text-lg font-semibold
+                  transition-all
+                  hover:bg-green-50 dark:hover:bg-green-950/30
+                  hover:border-green-300 dark:hover:border-green-700
+                  focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 dark:focus:ring-offset-neutral-900
+                  shadow-sm hover:shadow-md
+                "
               >
                 <img
                   src="/Microsoft_Office_Excel_(2025–present).svg"
-                  alt="Excel"
+                  alt=""
+                  loading="lazy"
                   className="w-8 h-8"
                 />
-                Excel Spreadsheet
+                <span>Download Excel</span>
               </a>
-              <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
-                Your data stays entirely on your own computer.
+              <p className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mt-2 text-center">
+                Your data stays on your own computer.
               </p>
             </div>
           </div>
@@ -176,7 +209,7 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-6">
               {steps.map((step, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-blue-600 dark:text-blue-400 mb-2 flex justify-center">
+                  <div className="text-emerald-600 dark:text-emerald-400 mb-2 flex justify-center">
                     {step.icon}
                   </div>
                   <h4 className="font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
